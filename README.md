@@ -1,6 +1,17 @@
-# Express error handling example
+# Express example
 
 **This example will not run! Some parts are not implemented.**
+
+This API specific Express app example is demonstrating
+in my opinion a good architecture.
+
+You can also read these slides for presentation called "Good Express.js Architecture":
+
+* [PDF with speaker notes](https://www.dropbox.com/s/hi8vkndliwiijxf/express-tips-speaker-notes.pdf?dl=0)
+* [PDF without speaker notes](https://www.dropbox.com/s/q2iyzx22m96ctqf/express-tips.pdf?dl=0)
+
+*Note: the terminology in this exampls is a bit different than in the slides.
+`controller = endpoint = http-layer` and `service = core = business logic`.*
 
 Here's how the Express API application has been architectured in the example:
 
