@@ -1,6 +1,7 @@
+var epUtils = require('./endpoint-utils');
 var userCore = require('../core/user-core');
 
-var getUser = createJsonRoute(function getUser(req, res) {
+var getUser = epUtils.createJsonRoute((req, res) => {
     // "Unwrap" the HTTP request
     // Take all needed input parameters from the request, and pass it
     // to lower level core, which shouldn't know about HTTP in general.
@@ -15,7 +16,7 @@ var getUser = createJsonRoute(function getUser(req, res) {
     }
 
     return userCore.getUserById(userId)
-    .then(function(user) {
+    .then(user => {
         if (!user) {
             var err = new Error('User does not exist.');
             err.status = 404;

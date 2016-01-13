@@ -1,4 +1,5 @@
 // TODO: Add a knex instance and configuration for it
+var _ = require('lodash');
 var knex = require('./our-configured-knex-instance');
 
 // All core methods return promises so that interacting with and chaining them
@@ -27,7 +28,7 @@ function getUserById(userId) {
             id: userId
         })
         .limit(1)
-        .then(function(rows) {
+        .then(rows => {
             if (_.isEmpty(rows)) {
                 return null;
             }

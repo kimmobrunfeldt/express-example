@@ -6,10 +6,8 @@ function createJsonRoute(func) {
     return function route(req, res, next) {
         try {
             func(req, res)
-            .then(function(result) {
-                res.json(result);
-            })
-            .catch(next);
+                .then(result => res.json(result))
+                .catch(next);
         } catch (err) {
             next(err);
         }

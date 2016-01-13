@@ -1,5 +1,7 @@
 # Express error handling example
 
+**This example will not run! Some parts are not implemented.**
+
 Here's how the Express API application has been architectured in the example:
 
 ![architecture](architecture.png)
